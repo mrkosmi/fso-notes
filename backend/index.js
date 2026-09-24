@@ -1,6 +1,5 @@
 const morgan = require('morgan')
 const express = require('express')
-const cors = require('cors')
 
 const app = express()
 
@@ -16,7 +15,6 @@ app.use(express.static('dist'))
 app.use(express.json())
 // app.use(requestLogger)
 app.use(morgan('dev'))
-app.use(cors())
 
 let notes = [
   {
